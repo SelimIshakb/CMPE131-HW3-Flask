@@ -1,8 +1,11 @@
 from flask import render_template, flash
-from app import myobj, name, city_names
+from app import myobj
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
+
+name = "Selim"
+city_names = ["Istanbul", "Ankara", "Izmir", "Bursa"]
 
 
 @myobj.route("/", methods=["GET", "POST"])
