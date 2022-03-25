@@ -8,7 +8,7 @@ city_names = ["Istanbul", "Ankara", "Izmir", "Bursa"]
 
 @myobj.route('/')
 def home():
-    response = f"""
+    page = f"""
     <!DOCTYPE HTML>
     <html>
         <body>
@@ -16,14 +16,14 @@ def home():
             <p><a href="www.google.com">not google</a></p>
             <ul>"""
     for city in city_names:
-        response += f"""
+        page += f"""
                 <li>{city}</li>"""
-    response += """
+    page += """
             </ul>
         </body>
     </html>"""
 
-    return response
+    return page
 
 
 myobj.run()
