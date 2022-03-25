@@ -1,13 +1,15 @@
-from flask import render_template
+from flask import render_template, flash, redirect, request, session, abort
 from app import myobj, name, city_names
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
 
-@myobj.route('/')
+@myobj.route("/", methods=["GET", "POST"])
 def home():
     form = CityForm()
+    if form.validate_on_submit():
+        flash(form.new_city.data)
     return render_template("home.html", name=name, cities=city_names, form=form)
 
 
