@@ -1,12 +1,7 @@
-from flask import Flask, render_template
-
-myobj = Flask(__name__)
-
-name = "Selim"
-city_names = ["Istanbul", "Ankara", "Izmir", "Bursa"]
+from flask import render_template
+from app import myobj, name, city_names
 
 
 @myobj.route('/')
 def home():
     return render_template("home.html", name=name, cities=city_names)
-
