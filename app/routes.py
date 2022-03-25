@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, request, session, abort
+from flask import render_template, flash
 from app import myobj, name, city_names
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
