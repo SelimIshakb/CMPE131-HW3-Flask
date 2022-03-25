@@ -26,4 +26,4 @@ def home():
     return page
 
 
-myobj.run()
+# myobj.run()
