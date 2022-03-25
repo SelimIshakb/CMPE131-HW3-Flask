@@ -12,8 +12,8 @@ def home():
     <!DOCTYPE HTML>
     <html>
         <body>
-            <h1>Welcome {name}</h1>
-            <p><a href="www.google.com">not google</a></p>
+            <h1>Welcome{name}!</h1>
+            <p><a href="www.google.com">notgoogle</a></p>
             <ul>"""
     for city in city_names:
         page += f"""
