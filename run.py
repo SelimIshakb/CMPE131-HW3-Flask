@@ -1,3 +1,3 @@
 from app import routes
 
-routes.myobj.run()
+# routes.myobj.run()
