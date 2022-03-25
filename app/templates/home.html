@@ -4,13 +4,24 @@
     <h1>Welcome{{ name }}!</h1>
 </head>
 <body>
-<p><a href="www.google.com">notgoogle</a> </p>
-<ul>
-    {% for city in cities %}
+    <p><a href="www.google.com">notgoogle</a> </p>
+    <ul>
+        {% for city in cities %}
 
-    <li>{{ city }}</li>
+        <li>{{ city }}</li>
 
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.new_city.label }}<br>
+            {{ form.new_city(size=32) }}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
 </body>
 </html>
